@@ -1,0 +1,41 @@
+.bouncy-ball-extension {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ff6b6b, #ee5a5a 40%, #c44d4d 100%);
+  box-shadow:
+    inset -5px -5px 15px rgba(0, 0, 0, 0.3),
+    inset 5px 5px 15px rgba(255, 255, 255, 0.2),
+    3px 3px 10px rgba(0, 0, 0, 0.3);
+  cursor: grab;
+  z-index: 2147483647;
+  user-select: none;
+  touch-action: none;
+  transition: transform 0.1s ease;
+}
+
+.bouncy-ball-extension:hover {
+  transform: scale(1.05);
+}
+
+.bouncy-ball-extension.dragging {
+  cursor: grabbing;
+  transform: scale(1.1);
+  box-shadow:
+    inset -5px -5px 15px rgba(0, 0, 0, 0.3),
+    inset 5px 5px 15px rgba(255, 255, 255, 0.2),
+    5px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.bouncy-ball-extension::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 12px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: rotate(-30deg);
+}

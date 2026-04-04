@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Bouncy Ball",
+  "version": "1.0",
+  "description": "A fun bouncy ball that lives on every page",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["ball.js", "content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
